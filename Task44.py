@@ -9,7 +9,7 @@ import pandas as pd
 list1 = [0, 1] * 10
 list2 = [1, 0] * 10
 random.shuffle(list1)
-for el in list2:
+for el in list1:
     if list1[el] == 0:
         list2[el] = 1
     else:
