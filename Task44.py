@@ -4,12 +4,22 @@
 import random
 import pandas as pd
 
-lst = ['robot'] * 10
-lst += ['human'] * 10
-list1 = [0, 1]
-list2 = [1, 0]
-random.shuffle(lst)
+# lst = ['robot'] * 10
+# lst += ['human'] * 10
+list1 = [0, 1] * 10
+list2 = [1, 0] * 10
+random.shuffle(list1)
+for el in list2:
+    if list1[el] == 0:
+        list2[el] = 1
+    else:
+        list2[el] = 0
 data = pd.DataFrame({'robot':list1, 'human' :list2})
-print(data.head())
+# for el in data:
+#     if data['human'][el] 'robot' == 0:
+#         data['human'][el] = 1
+#     else:
+#         data['human'][el] = 0
+# print(data.head())
 
-# print(data)
+print(data)
